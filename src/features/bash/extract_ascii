@@ -1,0 +1,10 @@
+#!/bin/bash
+function extract_ascii() {
+    # Extract ASCII strings from the binary
+    local filename=$1
+    local dest_path=$2
+    local basename=$(get_basename $filename)
+    strings -e s $filename > $dest_path/$basename.ascii.txt
+}
+
+extract_ascii $1 $2

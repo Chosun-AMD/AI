@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function extract_utf16le() {
+    # Extract UTF-16LE strings from the binary
+    local filename=$1
+    local dest_path=$2
+    local basename=$(get_basename $filename)
+    strings -e l $filename > $dest_path/$basename.utf16le.txt
+}
+
+extract_utf16le $1 $2

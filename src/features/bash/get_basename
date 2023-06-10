@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function get_basename() {
+    # Get basename and remove extension
+    local filename=$1
+    local basename=$(basename $filename)
+
+    echo ${basename%.*}
+}
+
+get_basename $1
