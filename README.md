@@ -7,7 +7,6 @@
 다음 명령어를 사용하여 종속 패키지 설치를 해야 됩니다.
 ```
 pip install -r src/requirements.txt
-pip install -r src/requirements.txt
 ```
 
 ### 실행
